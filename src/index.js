@@ -3,12 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
   form.addEventListener('submit', function(event){
     event.preventDefault()})
 
+  inputText.addEventListener('keypress', function(event){
     let inputText = document.getElementById('pokemon-name')
     displayPokemon(inputText.value)
-    inputText.value = ""
-
-  inputText.addEventListener('keypress', function(event){
-    debugger
   })
 
 	for (p of pokemonData.pokemons){
