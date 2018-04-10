@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-  let form = document.getElementById('pokemon-seach-form')
+  let form = document.getElementById('pokemon-search-form')
   form.addEventListener('submit', function(event){
-    event.preventDefault()
+    event.preventDefault()})
 
     let inputText = document.getElementById('pokemon-name')
-    addPokemon(inputText.value)
+    displayPokemon(inputText.value)
     inputText.value = ""
-  })
 
+  inputText.addEventListener('keypress', function(event){
+    debugger
+  })
 
 	for (p of pokemonData.pokemons){
 		pokemon = new Pokemon(p.name, p.sprites.front, p.sprites.back)
